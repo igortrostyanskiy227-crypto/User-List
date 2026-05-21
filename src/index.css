@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1120;
+  --panel: #111827;
+  --surface: #1a2540;
+  --surface-hover: #1e2d4d;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.14);
+  --primary: #549fd5;
+  --primary-dim: rgba(84, 159, 213, 0.15);
+  --text-primary: #edf3fb;
+  --text-secondary: rgba(237, 243, 251, 0.6);
+  --text-muted: #9a999e;
+  --status-active: #4ade80;
+  --status-active-dim: rgba(74, 222, 128, 0.12);
+  --status-expired: #ffb600;
+  --status-expired-dim: rgba(255, 182, 0, 0.12);
+  --status-inactive: #54c7ec;
+  --status-inactive-dim: rgba(84, 199, 236, 0.12);
+  --status-unavailable: rgba(237, 243, 251, 0.25);
+  --status-unavailable-dim: rgba(237, 243, 251, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
